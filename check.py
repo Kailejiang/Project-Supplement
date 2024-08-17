@@ -3,13 +3,13 @@ import numpy as np
 # This program is an example only
 
 # Reading .npz files
-data = np.load('file.npz')
+data = np.load('SeBn\\B=16.npz')
 
 # Get all array names in the file
 print(data.files)
 
 # Read one of the arrays
-array_name = 'my_array'
+array_name = 'z'
 my_array = data[array_name]
 print(my_array)
 
