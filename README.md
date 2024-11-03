@@ -12,5 +12,10 @@ For an introductory tutorial of SchNet, see https://github.com/atomistic-machine
 
 
 
-* schnet_IIA :
-  Include interatomic interaction attention and SMU blocks.(replace it with the original schnetpack/representation/schnet.py when using it)
+* schnet_IIA.py :
+  Include interatomic interaction attention and SMU blocks (replace it with the original schnetpack/representation/schnet.py when using it).
+
+
+
+* train_with_trans_embedding.py :
+  A method for using continuous feature transfer learning.
