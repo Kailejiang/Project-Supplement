@@ -3,7 +3,7 @@ from schnetpack.data import ASEAtomsData
 import numpy as np
 import os
 
-# 获取当前文件夹下所有 .npz 文件
+
 npz_files = [f for f in os.listdir('.') if f.endswith('.npz')]
 
 for file in npz_files:
