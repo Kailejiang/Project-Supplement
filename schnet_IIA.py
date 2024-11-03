@@ -101,8 +101,8 @@ class SchNet(nn.Module):
             activation: Union[Callable, nn.Module] = shifted_softplus,
             nuclear_embedding: Optional[nn.Module] = None,
             electronic_embeddings: Optional[List] = None,
-            n_heads: int = 1,  # 多头注意力的数量
-            out_channels: int = None  # 输出特征维度
+            n_heads: int = 1,  
+            out_channels: int = None  
     ):
         super().__init__()
         self.n_atom_basis = n_atom_basis
@@ -157,13 +157,13 @@ class SchNet(nn.Module):
         # compute interaction blocks and update atomic embeddings
         for interaction in self.interactions:
             gconv = GATConv(dimension, dimension, heads=10, concat=False).to("cuda:0")
-            edge_index = torch.stack([idx_i, idx_j], dim=0).to("cuda:0")  # 构建边索引
+            edge_index = torch.stack([idx_i, idx_j], dim=0).to("cuda:0")  
 
-            a = gconv(x, edge_index).to("cuda:0")  # 通过图注意力机制计算a
+            a = gconv(x, edge_index).to("cuda:0")  
             v = interaction(x, f_ij, idx_i, idx_j, rcut_ij)
             x = x + v + a
 
-        # collect results
+        
         inputs["scalar_representation"] = x
 
         return inputs
