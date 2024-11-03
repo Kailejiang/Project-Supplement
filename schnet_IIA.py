@@ -35,7 +35,6 @@ class SchNetInteraction(nn.Module):
         n_atom_basis: int,
         n_rbf: int,
         n_filters: int,
-        #activation: Callable = shifted_softplus,
         activation: Callable = SMU,
     ):
         """
