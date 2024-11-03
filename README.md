@@ -19,3 +19,7 @@ For an introductory tutorial of SchNet, see https://github.com/atomistic-machine
 
 * train_with_trans_embedding.py :
   A method for using continuous feature transfer learning.
+
+
+* Charge number coded.py :
+  Encoding matrix of atomic features during embedding.
